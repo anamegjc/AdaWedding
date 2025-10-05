@@ -14,6 +14,7 @@ body { font-family: 'Abhaya Libre', serif; background: #ffffff; color: #494b48; 
 .site-header{ text-align:center; padding:120px 20px 40px; position:relative; z-index:50; }
 .site-title{ font-size:58px; font-weight:300; letter-spacing:7px; text-transform:uppercase; color:#494b48; margin-bottom:20px; }
 .date-location{ font-size:21px; letter-spacing:2px; text-transform:uppercase; margin:10px 0; color:#494b48; }
+.date-location-bottom{ font-size:21px; letter-spacing:2px; text-transform:uppercase; margin:10px 0; color:#ffffff; }
 nav.site-nav{ background-color:#ffffff; border-top:1px solid #eee; border-bottom:1px solid #eee; padding:15px; text-align:center; position:sticky; top:56px; z-index:999; }
 nav.site-nav a{ color:#494b48; text-decoration:none; margin:0 18px; font-size:17px; letter-spacing:2px; padding:6px 6px; display:inline-block; }
 nav.site-nav a.active, nav.site-nav a:hover{ border-bottom:2px solid #494b48; padding-bottom:4px; }
