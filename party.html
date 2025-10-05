@@ -1,40 +1,88 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wedding Party — Adaeze & Okezie</title><link rel="stylesheet" href="style.css"></head><body>
+/* Wedding Party page styles
+   Link this AFTER your base style.css so these rules take effect.
+   Place portrait images in /images/party/ with the filenames used in party.html
+*/
 
-<div class="header-wrap">
-  <div class="hashtag-bar">#EzeeToLove2025</div>
-  <div class="floral-decorations" aria-hidden="true">
-    <div class="floral-top-left"></div>
-    <div class="floral-top-right"></div>
-  </div>
-  <header class="site-header">
-    <div class="site-title">ADAEZE &amp; OKEZIE</div>
-    <div class="date-location">DECEMBER 20, 2025 • ABUJA, NIGERIA</div>
-    <div class="countdown" aria-live="polite"></div>
-  </header>
-  
-<nav class="site-nav" aria-label="Primary">
-  <a href="index.html">Home</a>
-  <a href="story.html">Our Story</a>
-  <a href="photos.html">Photos</a>
-  <a href="party.html">Wedding Party</a>
-  <a href="details.html">Wedding Details</a>
-  <a href="qa.html">Q + A</a>
-  <a href="travel.html">Travel</a>
-</nav>
+.party-section {
+  padding: clamp(24px, 4vw, 48px) 0;
+}
 
-</div>
+.section-title {
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
 
-<main class="container"><section id="party"><h2 class="section-title">Wedding Party</h2>
-  <div class="event-details"><h3>Maid of Honor</h3><p><strong>Vivian Nlebemuo</strong></p></div>
-  <div class="event-details"><h3>Best Man</h3><p><strong>Tammy Enaregha</strong></p></div>
-  <div class="event-details"><h3>Bridesmaids &amp; Groomsmen</h3><p>Jennifer Asimobi • Afam Bright • Jessica Asimobi • Ugochukwu Anamege • Lucy Obiozor • Ogenetega Oganatoto • Stella Odaka • Mmesoma Anamege • Perpetua Obiozor • Ethelbert Nwachukwu • Ogoamaka Nwana • Chinedu Anekwe • Maureen Dimukeje • Obioma Amaechi</p></div>
-</section></main>
+.party-feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  align-items: start;
+  margin: 24px 0 40px;
+}
 
-<footer class="site-footer">
-  <h2>A&amp;O</h2>
-  <div class="date-location">12.20.2025</div>
-  <p style="margin-top:14px;">#EzeeToLove2025</p>
-</footer>
+.group-title {
+  font-size: 1.125rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .85;
+  margin: 12px 0 16px;
+  text-align: left;
+}
 
-<script src="script.js"></script></body></html>
+.party-grid-wrap {
+  margin-top: 8px;
+}
+
+.party-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 18px;
+}
+
+.party-card {
+  text-align: center;
+}
+
+.party-card .portrait {
+  width: 100%;
+  aspect-ratio: 3 / 4;             /* Tall portrait */
+  object-fit: cover;
+  border-radius: 14px;              /* Rounded rectangle look */
+  background: #f4f1ec;              /* Soft fallback color */
+  box-shadow: 0 10px 20px rgba(0,0,0,.05);
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.party-card .name {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  letter-spacing: .02em;
+}
+
+.role-badge {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 999px;
+  background: rgba(0,0,0,.03);
+}
+
+.meta { margin-top: 6px; }
+
+/* Respect any existing site container width */
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+/* Small tweaks for very narrow screens */
+@media (max-width: 420px) {
+  .party-grid { grid-template-columns: repeat(2, 1fr); }
+}
